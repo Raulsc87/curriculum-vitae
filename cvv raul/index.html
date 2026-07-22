@@ -1,0 +1,290 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currículum Vitae - Raúl Soto</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Raúl Soto</h1>
+
+        <h2>Estudiante de Ingeniería</h2>
+
+        <picture>
+    <source srcset="imagenes/foto.avif" type="image/avif">
+    <source srcset="imagenes/foto.webp" type="image/webp">
+
+    <img
+        src="imagenes/foto.jpg"
+        alt="Fotografía de Raúl Soto"
+        width="720"
+        height="1280"
+    >
+</picture>
+
+        <p>
+            Teléfono: 4746-5465
+        </p>
+
+        <p>
+            Correo electrónico: raulsoto77@gmail.com
+        </p>
+
+        <p>
+            Dirección: Quetzaltenango, Guatemala
+        </p>
+
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section>
+
+            <h2>Perfil profesional</h2>
+
+            <p>
+                Soy estudiante de Ingeniería con interés en el desarrollo de
+                software, programación web, bases de datos, redes informáticas
+                y desarrollo de videojuegos. Me considero una persona
+                responsable, organizada y con disposición para aprender
+                nuevas tecnologías.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Formación académica</h2>
+
+            <h3>Ingeniería</h3>
+
+            <p>
+                Universidad: Universidad Mesoamericana
+            </p>
+
+            <p>
+                Estado: Actualmente estudiando
+            </p>
+
+            <h3>Colegio Sagrado Corazón</h3>
+
+            <p>
+                Nivel académico: Educación diversificada
+            </p>
+
+            <p>
+                Estado: Graduado
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Conocimientos</h2>
+
+            <ul>
+                <li>Programación en C#</li>
+                <li>Bases de datos con PostgreSQL</li>
+                <li>SQL Server</li>
+                <li>Redes informáticas</li>
+                <li>Desarrollo de videojuegos con Unity</li>
+            </ul>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Proyectos académicos</h2>
+
+            <h3>Agenda electrónica</h3>
+
+            <p>
+                Aplicación desarrollada en C# para registrar, buscar,
+                actualizar y eliminar contactos.
+            </p>
+
+            <h3>Sistema de venta de boletos</h3>
+
+            <p>
+                Proyecto desarrollado con estructuras de datos para controlar
+                usuarios, compras, zonas y disponibilidad de boletos.
+            </p>
+
+            <h3>Programación de videojuegos con Unity</h3>
+
+            <p>
+                Desarrollo de videojuegos utilizando Unity y programación en
+                C#, integrando personajes, escenarios y diferentes elementos
+                interactivos.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Habilidades</h2>
+
+            <ul>
+                <li>Responsabilidad</li>
+                <li>Trabajo en equipo</li>
+                <li>Aprendizaje rápido</li>
+                <li>Resolución de problemas</li>
+                <li>Organización</li>
+            </ul>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Idiomas</h2>
+
+            <ul>
+                <li>Español: idioma nativo</li>
+                <li>Inglés: nivel básico</li>
+            </ul>
+
+        </section>
+
+        <hr>
+
+<section>
+
+    <h2>Contacto y disponibilidad</h2>
+
+    <form method="post">
+
+        <p>
+            <label for="nombre">Nombre completo:</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+            >
+        </p>
+
+        <p>
+            <label for="correo">Correo electrónico:</label>
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                required
+            >
+        </p>
+
+        <p>
+            <label for="telefono">Número de teléfono:</label>
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+            >
+        </p>
+
+        <p>
+            <label for="fecha_inicio">
+                Fecha disponible para iniciar:
+            </label>
+
+            <input
+                type="date"
+                id="fecha_inicio"
+                name="fecha_inicio"
+                min="2026-07-22"
+                max="2026-12-31"
+                required
+            >
+        </p>
+
+        <p>
+            <label for="hora_entrevista">
+                Hora preferida para la entrevista:
+            </label>
+
+            <input
+                type="time"
+                id="hora_entrevista"
+                name="hora_entrevista"
+                min="08:00"
+                max="17:00"
+                step="1800"
+                required
+            >
+        </p>
+
+        <p>
+            <label for="modalidad">Modalidad de trabajo:</label>
+
+            <select
+                id="modalidad"
+                name="modalidad"
+                required
+            >
+                <option value="">Seleccione una modalidad</option>
+                <option value="presencial">Presencial</option>
+                <option value="remoto">Remoto</option>
+                <option value="hibrido">Híbrido</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="carta">
+                Carta breve de presentación:
+            </label>
+        </p>
+
+        <p>
+            <textarea
+                id="carta"
+                name="carta"
+                rows="6"
+                cols="40"
+                required
+            ></textarea>
+        </p>
+
+        <button type="submit">
+            Enviar información
+        </button>
+
+    </form>
+
+</section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+
+        <p>
+            Currículum Vitae de Raúl Soto
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
