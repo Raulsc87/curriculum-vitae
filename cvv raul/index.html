@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,6 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Currículum Vitae - Raúl Soto</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #222222;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header,
+        main,
+        footer {
+            max-width: 850px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 4px solid #2f5d7c;
+        }
+
+        h1 {
+            color: #2f5d7c;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #2f5d7c;
+        }
+
+        h3 {
+            color: #444444;
+        }
+
+        picture img {
+            width: 180px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #2f5d7c;
+            margin: 15px 0;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #cccccc;
+        }
+
+        ul {
+            line-height: 1.7;
+        }
+
+        form {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 8px;
+            border: 1px solid #aaaaaa;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #2f5d7c;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #24475e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 15px;
+            border-top: 1px solid #cccccc;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+
+            header,
+            main,
+            footer {
+                padding: 15px;
+            }
+
+            picture img {
+                width: 140px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -18,16 +138,16 @@
         <h2>Estudiante de Ingeniería</h2>
 
         <picture>
-    <source srcset="imagenes/foto.avif" type="image/avif">
-    <source srcset="imagenes/foto.webp" type="image/webp">
+            <source srcset="imagenes/foto.avif" type="image/avif">
+            <source srcset="imagenes/foto.webp" type="image/webp">
 
-    <img
-        src="imagenes/foto.jpg"
-        alt="Fotografía de Raúl Soto"
-        width="720"
-        height="1280"
-    >
-</picture>
+            <img
+                src="imagenes/foto.jpg"
+                alt="Fotografía de Raúl Soto"
+                width="720"
+                height="1280"
+            >
+        </picture>
 
         <p>
             Teléfono: 4746-5465
@@ -42,8 +162,6 @@
         </p>
 
     </header>
-
-    <hr>
 
     <main>
 
@@ -166,115 +284,127 @@
 
         <hr>
 
-<section>
+        <section>
 
-    <h2>Contacto y disponibilidad</h2>
+            <h2>Contacto y disponibilidad</h2>
 
-    <form method="post">
+            <form method="post">
 
-        <p>
-            <label for="nombre">Nombre completo:</label>
-            <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                required
-            >
-        </p>
+                <p>
+                    <label for="nombre">Nombre completo:</label>
 
-        <p>
-            <label for="correo">Correo electrónico:</label>
-            <input
-                type="email"
-                id="correo"
-                name="correo"
-                required
-            >
-        </p>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required
+                    >
+                </p>
 
-        <p>
-            <label for="telefono">Número de teléfono:</label>
-            <input
-                type="tel"
-                id="telefono"
-                name="telefono"
-                required
-            >
-        </p>
+                <p>
+                    <label for="correo">Correo electrónico:</label>
 
-        <p>
-            <label for="fecha_inicio">
-                Fecha disponible para iniciar:
-            </label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        required
+                    >
+                </p>
 
-            <input
-                type="date"
-                id="fecha_inicio"
-                name="fecha_inicio"
-                min="2026-07-22"
-                max="2026-12-31"
-                required
-            >
-        </p>
+                <p>
+                    <label for="telefono">Número de teléfono:</label>
 
-        <p>
-            <label for="hora_entrevista">
-                Hora preferida para la entrevista:
-            </label>
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        required
+                    >
+                </p>
 
-            <input
-                type="time"
-                id="hora_entrevista"
-                name="hora_entrevista"
-                min="08:00"
-                max="17:00"
-                step="1800"
-                required
-            >
-        </p>
+                <p>
+                    <label for="fecha_inicio">
+                        Fecha disponible para iniciar:
+                    </label>
 
-        <p>
-            <label for="modalidad">Modalidad de trabajo:</label>
+                    <input
+                        type="date"
+                        id="fecha_inicio"
+                        name="fecha_inicio"
+                        min="2026-07-22"
+                        max="2026-12-31"
+                        required
+                    >
+                </p>
 
-            <select
-                id="modalidad"
-                name="modalidad"
-                required
-            >
-                <option value="">Seleccione una modalidad</option>
-                <option value="presencial">Presencial</option>
-                <option value="remoto">Remoto</option>
-                <option value="hibrido">Híbrido</option>
-            </select>
-        </p>
+                <p>
+                    <label for="hora_entrevista">
+                        Hora preferida para la entrevista:
+                    </label>
 
-        <p>
-            <label for="carta">
-                Carta breve de presentación:
-            </label>
-        </p>
+                    <input
+                        type="time"
+                        id="hora_entrevista"
+                        name="hora_entrevista"
+                        min="08:00"
+                        max="17:00"
+                        step="1800"
+                        required
+                    >
+                </p>
 
-        <p>
-            <textarea
-                id="carta"
-                name="carta"
-                rows="6"
-                cols="40"
-                required
-            ></textarea>
-        </p>
+                <p>
+                    <label for="modalidad">
+                        Modalidad de trabajo:
+                    </label>
 
-        <button type="submit">
-            Enviar información
-        </button>
+                    <select
+                        id="modalidad"
+                        name="modalidad"
+                        required
+                    >
+                        <option value="">
+                            Seleccione una modalidad
+                        </option>
 
-    </form>
+                        <option value="presencial">
+                            Presencial
+                        </option>
 
-</section>
+                        <option value="remoto">
+                            Remoto
+                        </option>
+
+                        <option value="hibrido">
+                            Híbrido
+                        </option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="carta">
+                        Carta breve de presentación:
+                    </label>
+
+                    <textarea
+                        id="carta"
+                        name="carta"
+                        rows="6"
+                        cols="40"
+                        required
+                    ></textarea>
+                </p>
+
+                <button type="submit">
+                    Enviar información
+                </button>
+
+            </form>
+
+        </section>
 
     </main>
-
-    <hr>
 
     <footer>
 
@@ -287,4 +417,3 @@
 </body>
 
 </html>
-```
