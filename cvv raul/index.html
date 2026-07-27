@@ -3,145 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Currículum Vitae - Raúl Soto</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            color: #222222;
-            margin: 0;
-            padding: 20px;
-        }
-
-        header,
-        main,
-        footer {
-            max-width: 850px;
-            margin: auto;
-            background-color: white;
-            padding: 25px;
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 4px solid #2f5d7c;
-        }
-
-        h1 {
-            color: #2f5d7c;
-            margin-bottom: 5px;
-        }
-
-        h2 {
-            color: #2f5d7c;
-        }
-
-        h3 {
-            color: #444444;
-        }
-
-        picture img {
-            width: 180px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 3px solid #2f5d7c;
-            margin: 15px 0;
-        }
-
-        section {
-            margin-bottom: 25px;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid #cccccc;
-        }
-
-        ul {
-            line-height: 1.7;
-        }
-
-        form {
-            background-color: #f7f7f7;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            max-width: 500px;
-            padding: 8px;
-            border: 1px solid #aaaaaa;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        button {
-            background-color: #2f5d7c;
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #24475e;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 15px;
-            border-top: 1px solid #cccccc;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 5px;
-            }
-
-            header,
-            main,
-            footer {
-                padding: 15px;
-            }
-
-            picture img {
-                width: 140px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <header>
+    <header class="encabezado">
 
         <h1>Raúl Soto</h1>
 
-        <h2>Estudiante de Ingeniería</h2>
+        <p class="profesion">
+            Estudiante de Ingeniería
+        </p>
 
         <picture>
-            <source srcset="imagenes/foto.avif" type="image/avif">
-            <source srcset="imagenes/foto.webp" type="image/webp">
+            <source
+                srcset="imagenes/foto.avif"
+                type="image/avif"
+            >
+
+            <source
+                srcset="imagenes/foto.webp"
+                type="image/webp"
+            >
 
             <img
+                class="foto-perfil"
                 src="imagenes/foto.jpg"
                 alt="Fotografía de Raúl Soto"
                 width="720"
@@ -179,8 +74,6 @@
 
         </section>
 
-        <hr>
-
         <section>
 
             <h2>Formación académica</h2>
@@ -207,8 +100,6 @@
 
         </section>
 
-        <hr>
-
         <section>
 
             <h2>Conocimientos</h2>
@@ -222,8 +113,6 @@
             </ul>
 
         </section>
-
-        <hr>
 
         <section>
 
@@ -253,8 +142,6 @@
 
         </section>
 
-        <hr>
-
         <section>
 
             <h2>Habilidades</h2>
@@ -269,8 +156,6 @@
 
         </section>
 
-        <hr>
-
         <section>
 
             <h2>Idiomas</h2>
@@ -282,16 +167,16 @@
 
         </section>
 
-        <hr>
-
-        <section>
+        <section id="contacto">
 
             <h2>Contacto y disponibilidad</h2>
 
             <form method="post">
 
                 <p>
-                    <label for="nombre">Nombre completo:</label>
+                    <label for="nombre">
+                        Nombre completo:
+                    </label>
 
                     <input
                         type="text"
@@ -302,7 +187,9 @@
                 </p>
 
                 <p>
-                    <label for="correo">Correo electrónico:</label>
+                    <label for="correo">
+                        Correo electrónico:
+                    </label>
 
                     <input
                         type="email"
@@ -313,7 +200,9 @@
                 </p>
 
                 <p>
-                    <label for="telefono">Número de teléfono:</label>
+                    <label for="telefono">
+                        Número de teléfono:
+                    </label>
 
                     <input
                         type="tel"
@@ -391,7 +280,6 @@
                         id="carta"
                         name="carta"
                         rows="6"
-                        cols="40"
                         required
                     ></textarea>
                 </p>
