@@ -13,15 +13,38 @@ body {
 header,
 main,
 footer {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     background-color: white;
     padding: 24px;
 }
 
+
+
 .encabezado {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     border-bottom: 4px solid #014432;
+}
+
+.contenedor-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datos-personales {
+    flex: 1;
+}
+
+.foto-perfil {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #014432;
+    padding: 4px;
 }
 
 h1,
@@ -46,17 +69,8 @@ p {
 
 .profesion {
     color: #5A5A55;
-    font-style: italic;
     font-size: 1.1rem;
-}
-
-.foto-perfil {
-    width: 180px;
-    max-width: 100%;
-    height: auto;
-    border: 3px solid #014432;
-    padding: 4px;
-    margin: 10px 0;
+    font-style: italic;
 }
 
 section {
@@ -69,9 +83,58 @@ ul {
     line-height: 1.7;
 }
 
-#contacto {
-    border: 2px solid #014432;
+
+.rejilla-informacion {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 20px;
+}
+
+.rejilla-informacion section {
+    margin: 0;
+}
+
+
+
+.rejilla-proyectos {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
+    gap: 15px;
+}
+
+.proyecto {
     background-color: #f7f7f7;
+    border: 1px solid #cccccc;
+    padding: 15px;
+}
+
+
+
+#contacto {
+    background-color: #f7f7f7;
+    border: 2px solid #014432;
+}
+
+
+
+.rejilla-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.rejilla-formulario p {
+    margin: 0;
 }
 
 label {
@@ -123,4 +186,38 @@ button:hover {
 footer {
     text-align: center;
     border-top: 4px solid #014432;
+}
+
+
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 8px;
+    }
+
+
+
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+   
+
+    .rejilla-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    header,
+    main,
+    footer {
+        padding: 15px;
+    }
+
+    .foto-perfil {
+        width: 140px;
+    }
+
 }
