@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Documentación Bootstrap - Raúl Soto</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="proyectos.css">
+</head>
+
+<body id="inicio">
+
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                Raúl Soto
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Mostrar navegación"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="menuPrincipal"
+            >
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html"
+                        >
+                            Hoja de vida
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="proyectos.html"
+                        >
+                            Proyectos
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="documentacion.html"
+                            aria-current="page"
+                        >
+                            Documentación
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <header class="container py-5 text-center">
+
+        <h1 class="display-5 fw-bold">
+            Documentación de Bootstrap
+        </h1>
+
+        <p class="lead">
+            Apuntes y ejemplos de Bootstrap utilizados
+            en mi sitio web.
+        </p>
+
+    </header>
+
+    <main class="container pb-5">
+
+        <section class="mb-5">
+
+            <h2 class="mb-3">
+                Índice
+            </h2>
+
+            <div class="list-group">
+
+                <a
+                    class="list-group-item list-group-item-action"
+                    href="#integracion"
+                >
+                    Integración de Bootstrap
+                </a>
+
+                <a
+                    class="list-group-item list-group-item-action"
+                    href="#breakpoints"
+                >
+                    Breakpoints
+                </a>
+
+                <a
+                    class="list-group-item list-group-item-action"
+                    href="#rejilla"
+                >
+                    Rejilla
+                </a>
+
+                <a
+                    class="list-group-item list-group-item-action"
+                    href="#componentes"
+                >
+                    Componentes
+                </a>
+
+                <a
+                    class="list-group-item list-group-item-action"
+                    href="#errores"
+                >
+                    Errores y silencios
+                </a>
+
+            </div>
+
+        </section>
+
+        <section
+            id="integracion"
+            class="mb-5"
+        >
+
+            <h2>
+                Integración de Bootstrap
+            </h2>
+
+            <p>
+                Para utilizar Bootstrap agregamos la línea de estilos dentro del
+                head donde se encuentra la configuración principal de la página
+                luego agregamos el script de JavaScript antes de cerrar el /body.
+            </p>
+
+            <h3 class="h5 mt-4">
+                Bootstrap CSS
+            </h3>
+
+            <pre class="bg-dark text-light p-3 rounded"><code>&lt;link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+&gt;</code></pre>
+
+            <p>
+                Al agregar la linea de arriba podemos utilizar diferentes estilos 
+                de ccs sin tener que programar desde cero como container, row, 
+                card, badge y btn.
+            </p>
+
+            <h3 class="h5 mt-4">
+                Bootstrap JavaScript
+            </h3>
+
+            <pre class="bg-dark text-light p-3 rounded"><code>&lt;script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+&gt;&lt;/script&gt;</code></pre>
+
+            <p>
+                El archivo JavaScript permite funcionar con css para darle animacion
+                o el funcionamiento a nuestra pagina web para que tenga moviento o interacciones.
+            </p>
+
+            <a
+                href="#inicio"
+                class="btn btn-outline-primary"
+            >
+                Volver arriba
+            </a>
+
+        </section>
+
+        <section
+            id="breakpoints"
+            class="mb-5"
+        >
+
+            <h2>
+                Breakpoints
+            </h2>
+
+            <p>  
+                Los breakpoints son distribuciones que utilizamos
+                con contenedores para cambiar el ancho de la pantalla 
+                en (px) y se adapte dependiendo el dispositivo los siguientes
+                son los por defecto que trae Bootstrap. 
+            </p>
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-striped">
+
+                    <thead>
+
+                        <tr>
+                            <th>Tamaño</th>
+                            <th>Prefijo</th>
+                            <th>Ancho</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Extra pequeño</td>
+                            <td>Sin prefijo</td>
+                            <td>Menor a 576px</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pequeño</td>
+                            <td>sm</td>
+                            <td>576px o más</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mediano</td>
+                            <td>md</td>
+                            <td>768px o más</td>
+                        </tr>
+
+                        <tr>
+                            <td>Grande</td>
+                            <td>lg</td>
+                            <td>992px o más</td>
+                        </tr>
+
+                        <tr>
+                            <td>Extra grande</td>
+                            <td>xl</td>
+                            <td>1200px o más</td>
+                        </tr>
+
+                        <tr>
+                            <td>Extra extra grande</td>
+                            <td>xxl</td>
+                            <td>1400px o más</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <a
+                href="#inicio"
+                class="btn btn-outline-primary"
+            >
+                Volver arriba
+            </a>
+
+        </section>
+
+        <section
+            id="rejilla"
+            class="mb-5"
+        >
+
+            <h2>
+                Rejilla de Bootstrap
+            </h2>
+
+            <p>
+                Para organizar el contenido primero utilizo
+                un container después una fila con row y
+                dentro de esa fila coloco las columnas.
+            </p>
+
+            <h3 class="h5 mt-4">
+                Ejemplo de mi página de proyectos
+            </h3>
+
+            <div class="row g-3 mb-3">
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="border rounded p-3 text-center">
+                        Proyecto 1
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="border rounded p-3 text-center">
+                        Proyecto 2
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="border rounded p-3 text-center">
+                        Proyecto 3
+                    </div>
+
+                </div>
+
+            </div>
+
+            <pre class="bg-dark text-light p-3 rounded"><code>&lt;div class="row g-4"&gt;
+
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+        Proyecto
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+            <p>
+                En el telefono utilizo col-12 y aparece un proyecto
+                por fila. Desde md utilizo col-md-6 y aparecen
+                dos proyectos. Desde lg utilizo col-lg-4 y
+                aparecen tres proyectos por fila.
+            </p>
+
+            <a
+                href="#inicio"
+                class="btn btn-outline-primary"
+            >
+                Volver arriba
+            </a>
+
+        </section>
+
+        <section
+            id="componentes"
+            class="mb-5"
+        >
+
+            <h2 class="mb-4">
+                Componentes de Bootstrap
+            </h2>
+
+            <article class="mb-5">
+
+                <h3 class="h4">
+                    Botón
+                </h3>
+
+                <p>
+                    Utilizo los botones para acciones importantes
+                    como consultar un proyecto o enviar informacion.
+                </p>
+
+                <div class="mb-3">
+
+                    <a
+                        href="#formulario"
+                        class="btn btn-primary"
+                    >
+                        Consultar proyecto
+                    </a>
+
+                </div>
+
+                <pre class="bg-dark text-light p-3 rounded"><code>&lt;a
+    href="#formulario"
+    class="btn btn-primary"
+&gt;
+    Consultar proyecto
+&lt;/a&gt;</code></pre>
+
+                <p class="mt-3">
+                    En mi pagina utilice btn junto con btn-primary.
+                    Entendi que btn es la clase principal del botón
+                    y btn-primary define su variante.
+                </p>
+
+            </article>
+
+            <article class="mb-5">
+
+                <h3 class="h4">
+                    Tarjeta
+                </h3>
+
+                <p>
+                    Las tarjetas me sirven para separar y organizar
+                    cada uno de mis proyectos de forma separada.
+                </p>
+
+                <div class="card mb-3">
+
+                    <div class="card-body">
+
+                        <h4 class="card-title h5">
+                            Dead Orden - Juego 3D
+                        </h4>
+
+                        <p class="card-text">
+                            Videojuego desarrollado en Unity
+                            utilizando C#.
+                        </p>
+
+                        <a
+                            href="#formulario"
+                            class="btn btn-primary"
+                        >
+                            Consultar proyecto
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <pre class="bg-dark text-light p-3 rounded"><code>&lt;article class="card"&gt;
+
+    &lt;div class="card-body"&gt;
+
+        &lt;h3 class="card-title"&gt;
+            Dead Orden - Juego 3D
+        &lt;/h3&gt;
+
+        &lt;p class="card-text"&gt;
+            Videojuego desarrollado en Unity.
+        &lt;/p&gt;
+
+    &lt;/div&gt;
+
+&lt;/article&gt;</code></pre>
+
+                <p class="mt-3">
+                    Utilice card para crear la tarjeta para luego con card_body crear 
+                    el area del contenido, luego card-title para el titulo del proyecto
+                    y card-text para dar el formato del texto luego replique lo mismo para 
+                    los tres proyectos con una estructura siomilar. 
+                </p>
+
+            </article>
+
+            <article class="mb-5">
+
+                <h3 class="h4">
+                    Insignias
+                </h3>
+
+                <p>
+                    Las insignias las agregue para mostrar de manera rapida
+                    las tecnologias utilizadas para cada proyecto. 
+                </p>
+
+                <div class="mb-3">
+
+                    <span class="badge text-bg-primary">
+                        Unity
+                    </span>
+
+                    <span class="badge text-bg-secondary">
+                        C#
+                    </span>
+
+                    <span class="badge text-bg-success">
+                        3D
+                    </span>
+
+                </div>
+
+                <pre class="bg-dark text-light p-3 rounded"><code>&lt;span class="badge text-bg-primary"&gt;
+    Unity
+&lt;/span&gt;
+
+&lt;span class="badge text-bg-secondary"&gt;
+    C#
+&lt;/span&gt;
+
+&lt;span class="badge text-bg-success"&gt;
+    3D
+&lt;/span&gt;</code></pre>
+
+                <p class="mt-3">
+                    En mi pagina agregue badge debajo de cada proyecto
+                    cambiando text-bg-primary que aplica una combinacion
+                    del color del fondo y texto esto usando variantes en 
+                    cada uno para distinguirlos. 
+                </p>
+
+            </article>
+
+            <article class="mb-5">
+
+                <h3 class="h4">
+                    Barra de navegacion 
+                </h3>
+
+                <p>
+                    La barra de navegación conecta las tres páginas
+                    de mi sitio y cambia a un menú hamburguesa cuando
+                    la pantalla es pequeña.
+                </p>
+
+                <nav class="navbar navbar-expand-md bg-body-tertiary mb-3">
+
+                    <div class="container-fluid">
+
+                        <a
+                            class="navbar-brand"
+                            href="#inicio"
+                        >
+                            Raúl Soto
+                        </a>
+
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#menuDemo"
+                            aria-controls="menuDemo"
+                            aria-expanded="false"
+                            aria-label="Mostrar navegación"
+                        >
+
+                            <span class="navbar-toggler-icon"></span>
+
+                        </button>
+
+                        <div
+                            class="collapse navbar-collapse"
+                            id="menuDemo"
+                        >
+
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item">
+
+                                    <a
+                                        class="nav-link"
+                                        href="#inicio"
+                                    >
+                                        Hoja de vida
+                                    </a>
+
+                                </li>
+
+                                <li class="nav-item">
+
+                                    <a
+                                        class="nav-link"
+                                        href="#componentes"
+                                    >
+                                        Proyectos
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </nav>
+
+                <pre class="bg-dark text-light p-3 rounded"><code>&lt;button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#menuDemo"
+&gt;
+
+    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+
+&lt;/button&gt;
+
+&lt;div
+    class="collapse navbar-collapse"
+    id="menuDemo"
+&gt;
+
+    Menú
+
+&lt;/div&gt;</code></pre>
+
+                <p class="mt-3">
+                    Aprendí que data-bs-target debe coincidir con el
+                    id del elemento collapse. Si son diferentes,
+                    el botón hamburguesa aparece pero no abre el menú.
+                </p>
+
+            </article>
+
+            <article
+                id="formulario"
+                class="mb-5"
+            >
+
+                <h3 class="h4">
+                    Formulario
+                </h3>
+
+                <p>
+                    Bootstrap permite dar formato a los controles
+                    utilizando clases como form-label, form-control
+                    y form-select.
+                </p>
+
+                <form class="mb-3">
+
+                    <div class="row g-3">
+
+                        <div class="col-12 col-md-6">
+
+                            <label
+                                for="nombre-demo"
+                                class="form-label"
+                            >
+                                Nombre
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nombre-demo"
+                                name="nombre-demo"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="col-12 col-md-6">
+
+                            <label
+                                for="correo-demo"
+                                class="form-label"
+                            >
+                                Correo
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="correo-demo"
+                                name="correo-demo"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="col-12">
+
+                            <label
+                                for="motivo-demo"
+                                class="form-label"
+                            >
+                                Motivo
+                            </label>
+
+                            <select
+                                class="form-select"
+                                id="motivo-demo"
+                                name="motivo-demo"
+                            >
+
+                                <option>
+                                    Consultar proyecto
+                                </option>
+
+                                <option>
+                                    Solicitar información
+                                </option>
+
+                                <option>
+                                    Entrevista
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+                <pre class="bg-dark text-light p-3 rounded"><code>&lt;label
+    for="nombre"
+    class="form-label"
+&gt;
+    Nombre
+&lt;/label&gt;
+
+&lt;input
+    type="text"
+    class="form-control"
+    id="nombre"
+    name="nombre"
+    required
+&gt;</code></pre>
+
+                <p class="mt-3">
+                    Utilicé form-label para las etiquetas y
+                    form-control para los campos. Bootstrap cambia
+                    su apariencia, pero required y type siguen
+                    realizando la validación del navegador.
+                </p>
+
+            </article>
+
+            <article class="mb-5">
+
+                <h3 class="h4">
+                    Alert
+                </h3>
+
+                <p>
+                    El Alert lo agregue para mostrar un aviso dentro
+                    de mi pagina de proyectos.
+                </p>
+
+                <div
+                    class="alert alert-success"
+                    role="alert"
+                >
+                    Estos proyectos forman parte de mi portafolio académico.
+                </div>
+
+                <pre class="bg-dark text-light p-3 rounded"><code>&lt;div
+    class="alert alert-success"
+    role="alert"
+&gt;
+    Estos proyectos forman parte de mi portafolio académico.
+&lt;/div&gt;</code></pre>
+
+                <p class="mt-3">
+                    Para utilizarlo agregue alert que es la clase principal
+                    y alert-success para darle la variante de color verde
+                    al aviso.
+                </p>
+
+            </article>
+
+            <a
+                href="#inicio"
+                class="btn btn-outline-primary"
+            >
+                Volver arriba
+            </a>
+
+        </section>
+
+        <section
+            id="errores"
+            class="mb-5"
+        >
+
+            <h2>
+                Errores y silencios
+            </h2>
+
+            <p>
+                Estos son algunos errores que pueden ocurrir
+                sin mostrar un mensaje directamente en la página.
+                DevTools ayuda a encontrarlos.
+            </p>
+
+            <article class="card mb-4">
+
+                <div class="card-body">
+
+                    <h3 class="card-title h5">
+                        CDN mal copiado
+                    </h3>
+
+                    <p>
+                        <strong>Síntoma:</strong>
+                        la página aparece sin los estilos de Bootstrap.
+                    </p>
+
+                    <p>
+                        <strong>Diagnóstico:</strong>
+                        abro DevTools y reviso Network. Si el archivo
+                        de Bootstrap no carga correctamente, puedo
+                        revisar la URL del CDN.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="card mb-4">
+
+                <div class="card-body">
+
+                    <h3 class="card-title h5">
+                        data-bs-target no coincide con el id
+                    </h3>
+
+                    <p>
+                        <strong>Síntoma:</strong>
+                        el botón hamburguesa aparece, pero al presionarlo
+                        el menú no se abre.
+                    </p>
+
+                    <p>
+                        <strong>Diagnóstico:</strong>
+                        reviso el HTML en DevTools y comparo el valor
+                        de data-bs-target con el id del elemento
+                        que tiene la clase collapse.
+                    </p>
+
+                    <pre class="bg-dark text-light p-3 rounded"><code>data-bs-target="#menuPrincipal"
+
+id="menuPrincipal"</code></pre>
+
+                </div>
+
+            </article>
+
+            <article class="card mb-4">
+
+                <div class="card-body">
+
+                    <h3 class="card-title h5">
+                        Bundle de JavaScript ausente
+                    </h3>
+
+                    <p>
+                        <strong>Síntoma:</strong>
+                        los estilos funcionan, pero componentes
+                        interactivos como el botón hamburguesa
+                        no responden.
+                    </p>
+
+                    <p>
+                        <strong>Diagnóstico:</strong>
+                        reviso Network en DevTools para comprobar
+                        que bootstrap.bundle.min.js aparece y se
+                        carga correctamente.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <a
+                href="#inicio"
+                class="btn btn-outline-primary"
+            >
+                Volver arriba
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-body-tertiary text-center py-4">
+
+        <p class="mb-0">
+            Documentación de Bootstrap - Raúl Soto
+        </p>
+
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+</body>
+
+</html>
